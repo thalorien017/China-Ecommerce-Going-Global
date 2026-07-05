@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>国内电商平台出海：2026 成功地图</title>
+  <meta name="description" content="朋友圈/小红书风格长图 H5：国内电商平台出海成功案例、数据与风险分析。" />
+  <style>
+    :root{
+      --bg:#f7f0e6;
+      --paper:#fffaf1;
+      --ink:#141414;
+      --muted:#6c6258;
+      --line:#e8dac7;
+      --red:#ff375f;
+      --orange:#ff8d36;
+      --yellow:#ffd36a;
+      --green:#36b37e;
+      --blue:#376bff;
+      --purple:#8b5cf6;
+      --shadow:0 14px 40px rgba(40,25,10,.12);
+      --soft-shadow:0 8px 24px rgba(40,25,10,.08);
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Inter,Arial,sans-serif;color:var(--ink);background:
+      radial-gradient(circle at 8% 4%,rgba(255,55,95,.18),transparent 24rem),
+      radial-gradient(circle at 92% 12%,rgba(255,141,54,.18),transparent 22rem),
+      linear-gradient(180deg,#fbf2e7 0%,#f7efe5 52%,#f3eadf 100%);
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none}
+    .app{max-width:430px;margin:0 auto;min-height:100vh;position:relative;overflow:hidden;padding-bottom:40px}
+    .grain{position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+    .topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:10px 16px 8px;background:rgba(247,240,230,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(232,218,199,.72)}
+    .brand{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.02em}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:12px 0 0 var(--orange),24px 0 0 var(--yellow)}
+    .pill{font-size:11px;border:1px solid var(--line);background:rgba(255,250,241,.82);border-radius:999px;padding:6px 10px;color:#5f554b;font-weight:700}
+    section{padding:0 16px;margin:18px 0}
+    .hero{padding-top:18px;margin-top:0}
+    .hero-card{position:relative;border-radius:34px;background:linear-gradient(145deg,#15110f 0%,#2a1b18 54%,#5b241e 100%);color:#fff;padding:28px 22px 24px;box-shadow:var(--shadow);overflow:hidden;min-height:560px}
+    .hero-card:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:-86px;top:-72px;background:radial-gradient(circle,rgba(255,55,95,.65),rgba(255,141,54,.22) 48%,transparent 70%)}
+    .hero-card:after{content:"";position:absolute;left:-50px;bottom:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(255,211,106,.38),transparent 65%)}
+    .hero-content{position:relative;z-index:2}
+    .tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;color:#fff}
+    .tag.hot{background:#fff;color:#201713;border-color:#fff}
+    .eyebrow{font-size:13px;letter-spacing:.12em;color:#ffd6d0;font-weight:900;margin-bottom:12px;text-transform:uppercase}
+    h1{font-size:54px;line-height:.93;margin:0 0 16px;letter-spacing:-.08em;font-weight:950}
+    .subtitle{font-size:18px;line-height:1.45;color:#f9e9df;font-weight:750;margin:0 0 24px;max-width:350px}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}
+    .hero-metric{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:14px 12px;min-height:92px}
+    .hero-metric b{display:block;font-size:26px;letter-spacing:-.04em;margin-bottom:4px}
+    .hero-metric span{font-size:11px;line-height:1.35;color:#f4d9ce;font-weight:700}
+    .quote{margin-top:18px;border-left:4px solid var(--yellow);padding:12px 0 12px 14px;color:#fff3dc;font-size:15px;font-weight:850;line-height:1.55}
+    .scrollhint{position:absolute;bottom:18px;right:20px;display:flex;gap:8px;align-items:center;font-size:11px;color:#ffd8cd;font-weight:800;z-index:4}.arrow{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.16)}
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;margin:0 0 12px}.section-title h2{font-size:24px;letter-spacing:-.05em;line-height:1.02;margin:0;font-weight:950}.section-title small{font-size:11px;color:var(--muted);font-weight:800}
+    .card{background:rgba(255,250,241,.86);border:1px solid rgba(232,218,199,.86);box-shadow:var(--soft-shadow);border-radius:var(--radius);padding:18px;overflow:hidden;position:relative}.card+.card{margin-top:12px}
+    .bigline{font-size:22px;line-height:1.18;letter-spacing:-.04em;font-weight:950;margin:0 0 10px}.bodycopy{font-size:14px;color:#4d453e;font-weight:650;margin:0}.bodycopy b{color:#111}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.chip{padding:7px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:11px;color:#60574d;font-weight:850}.chip.red{background:#fff0f3;border-color:#ffd3dc;color:#c11b42}.chip.green{background:#ecfff6;border-color:#c9f2df;color:#1d7d56}.chip.blue{background:#eff4ff;border-color:#d7e1ff;color:#244eCA}.chip.orange{background:#fff4e8;border-color:#ffdfba;color:#a85410}
+    .rank-list{display:grid;gap:12px}.rank{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:14px;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 5px 14px rgba(40,25,10,.05)}.rank-num{width:38px;height:38px;border-radius:15px;display:grid;place-items:center;background:#17120f;color:#fff;font-weight:950;font-size:15px}.rank:nth-child(1) .rank-num{background:linear-gradient(135deg,var(--red),var(--orange))}.rank:nth-child(2) .rank-num{background:linear-gradient(135deg,var(--purple),var(--blue))}.rank:nth-child(3) .rank-num{background:linear-gradient(135deg,#111,#555)}.rank-name{font-weight:950;font-size:17px;letter-spacing:-.03em}.rank-desc{font-size:11px;color:var(--muted);font-weight:700;margin-top:2px}.score{font-size:22px;font-weight:950;letter-spacing:-.05em}.score small{font-size:10px;color:var(--muted);font-weight:800;margin-left:1px}
+    .platform{padding:0;overflow:hidden}.platform-head{padding:18px 18px 14px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.logo{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;color:#fff;font-size:22px;font-weight:950;box-shadow:0 10px 20px rgba(0,0,0,.1)}.tiktok{background:linear-gradient(145deg,#111,#333)}.temu{background:linear-gradient(145deg,#ff6d00,#ffb21f)}.shein{background:linear-gradient(145deg,#0e0e0e,#515151)}.ali{background:linear-gradient(145deg,#ff6a00,#ffb000)}.jd{background:linear-gradient(145deg,#e4002b,#ff6b6b)}.platform h3{font-size:23px;margin:0;letter-spacing:-.05em}.platform .sub{font-size:12px;color:var(--muted);font-weight:800;margin-top:4px}.badge{font-size:11px;font-weight:950;border-radius:999px;padding:7px 9px;background:#111;color:#fff;white-space:nowrap}.platform-body{padding:16px 18px 18px}.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}.metric{border-radius:20px;background:#fff;border:1px solid var(--line);padding:13px 11px}.metric .num{font-size:25px;font-weight:950;letter-spacing:-.06em;line-height:1}.metric .label{font-size:10px;color:#756b61;font-weight:850;margin-top:6px;line-height:1.25}.verdict{font-size:14px;line-height:1.5;color:#332c26;font-weight:700;margin:0}.bar{height:9px;border-radius:999px;background:#efe2d1;overflow:hidden;margin-top:12px}.bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--orange));width:var(--w)}.factor{display:flex;align-items:center;justify-content:space-between;margin-top:9px;font-size:11px;color:#71665b;font-weight:850}
+    .matrix-card{padding-bottom:12px}.matrix{background:#fff;border:1px solid var(--line);border-radius:24px;padding:10px;margin-top:12px}.axis-label{display:flex;justify-content:space-between;font-size:10px;color:#796f65;font-weight:850;margin:2px 4px 0}.note{font-size:11px;line-height:1.5;color:#746a60;font-weight:700;margin:10px 4px 0}.svgtext{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-weight:900;fill:#201914}.svgsmall{font-size:10px;fill:#756b61;font-weight:800}.bubble{filter:drop-shadow(0 4px 8px rgba(0,0,0,.14))}
+    .risk-grid{display:grid;grid-template-columns:1fr;gap:10px}.risk{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px}.risk-icon{width:38px;height:38px;border-radius:15px;background:#fff0f3;display:grid;place-items:center;font-size:18px}.risk h4{margin:0 0 4px;font-size:15px;font-weight:950}.risk p{margin:0;color:#61574f;font-size:12px;font-weight:700;line-height:1.45}
+    .timeline{position:relative;padding-left:18px}.timeline:before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--red),var(--orange),var(--line))}.tl{position:relative;margin:0 0 14px;padding-left:12px}.tl:last-child{margin-bottom:0}.tl:before{content:"";position:absolute;left:-18px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px #fff0f3}.tl b{font-size:14px}.tl p{margin:3px 0 0;font-size:12px;color:#665b52;font-weight:700;line-height:1.45}
+    .source-list{font-size:10px;color:#756b61;font-weight:700;line-height:1.55;padding-left:16px;margin:10px 0 0}.source-list a{text-decoration:underline;text-underline-offset:2px}.source-list li{margin:6px 0}
+    .sticky-actions{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:30;width:min(398px,calc(100vw - 28px));display:grid;grid-template-columns:1fr auto;gap:8px;pointer-events:none}.sticky-actions button,.sticky-actions a{pointer-events:auto;border:none;border-radius:999px;padding:12px 14px;font-size:13px;font-weight:950;box-shadow:0 10px 24px rgba(40,25,10,.18)}.primary{background:#17120f;color:#fff}.secondary{background:rgba(255,250,241,.92);color:#332c26;border:1px solid var(--line)!important}.toast{position:fixed;left:50%;bottom:76px;transform:translateX(-50%) translateY(20px);opacity:0;background:#17120f;color:#fff;border-radius:999px;padding:10px 14px;font-size:12px;font-weight:850;z-index:50;transition:.24s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .footer{padding:28px 16px 80px;text-align:center;color:#71665b;font-size:11px;font-weight:700}.footer b{color:#211a16}.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:18px 0}.mini-title{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:950;color:#3a322b;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 10px;margin-bottom:10px}.sticker{position:absolute;right:12px;top:12px;transform:rotate(5deg);background:#fff;border:2px solid #111;border-radius:16px;padding:8px 10px;font-size:13px;font-weight:950;box-shadow:4px 4px 0 #111}.reveal{opacity:0;transform:translateY(16px);transition:.55s cubic-bezier(.2,.8,.2,1)}.reveal.on{opacity:1;transform:translateY(0)}
+    @media (max-width:380px){h1{font-size:48px}.hero-card{min-height:540px}.metric-row{grid-template-columns:1fr}.score{font-size:19px}.platform h3{font-size:21px}}
+    @media print{.topbar,.sticky-actions,.toast{display:none}.app{max-width:430px}.reveal{opacity:1;transform:none}body{background:#f7f0e6}}
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <main class="app">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span><span>出海电商 · 2026</span></div>
+      <a class="pill" href="#sources">数据源</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-card reveal">
+        <div class="hero-content">
+          <div class="tagrow">
+            <span class="tag hot">朋友圈长图版</span>
+            <span class="tag">小红书信息流</span>
+            <span class="tag">截至 2026</span>
+          </div>
+          <div class="eyebrow">China Ecommerce Going Global</div>
+          <h1>国内电商<br>出海成功<br>地图</h1>
+          <p class="subtitle">不是谁声量大谁赢。2026 年以后，真正的门槛变成：需求生成、本地履约、合规抗压、商家生态。</p>
+          <div class="hero-grid">
+            <div class="hero-metric"><b>5</b><span>个核心样本：TikTok Shop / Temu / SHEIN / 阿里国际 / Joybuy</span></div>
+            <div class="hero-metric"><b>2026</b><span>政策窗口明显收紧，小包红利进入后半场</span></div>
+            <div class="hero-metric"><b>64.3B</b><span>TikTok Shop 2025 全球 GMV，美元口径</span></div>
+            <div class="hero-metric"><b>€3</b><span>欧盟低价值包裹处理费，2026/7/1 生效</span></div>
+          </div>
+          <div class="quote">一句话：TikTok Shop 最像新基础设施，SHEIN 品类最深，Temu 破圈最猛，阿里底盘最厚，京东还在验证。</div>
+        </div>
+        <div class="scrollhint"><span>向下看判断</span><span class="arrow">↓</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title reveal"><h2>先给结论</h2><small>Ranking</small></div>
+      <div class="card reveal">
+        <p class="bigline">成功不等于“海外有人买”。真正成功要跨过四道坎。</p>
+        <p class="bodycopy"><b>第一，能不能稳定制造需求；第二，履约是否本地化；第三，商家/达人/供应链是否能自循环；第四，监管变严后是否还能赚钱。</b> 只靠低价和投放打穿市场，2026 年开始会被重新定价。</p>
+        <div class="chips"><span class="chip red">需求生成</span><span class="chip orange">履约效率</span><span class="chip blue">商家生态</span><span class="chip green">政策抗压</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="rank-list">
+          <div class="rank"><div class="rank-num">1</div><div><div class="rank-name">TikTok Shop</div><div class="rank-desc">模式最优：内容流量直接闭环交易</div></div><div class="score">93<small>/100</small></div></div>
+          <div class="rank"><div class="rank-num">2</div><div><div class="rank-name">SHEIN</div><div class="rank-desc">品类最深：快时尚心智与柔性供应链</div></div><div class="score">88<small>/100</small></div></div>
+          <div class="rank"><div class="rank-num">3</div><div><div class="rank-name">Temu</div><div class="rank-desc">破圈最猛：低价心智全球化，但政策 beta 高</div></div><div class="score">84<small>/100</small></div></div>
+          <div class="rank"><div class="rank-num">4</div><div><div class="rank-name">阿里国际</div><div class="rank-desc">底盘最厚：B2B + 零售 + 跨境服务组合</div></div><div class="score">80<small>/100</small></div></div>
+          <div class="rank"><div class="rank-num">?</div><div><div class="rank-name">JD Joybuy</div><div class="rank-desc">观察位：欧洲本地履约路线，尚未充分验证</div></div><div class="score">—</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title reveal"><h2>平台数据卡</h2><small>Data Cards</small></div>
+
+      <article class="card platform reveal">
+        <div class="platform-head"><div style="display:flex;gap:12px;align-items:center"><div class="logo tiktok">T</div><div><h3>TikTok Shop</h3><div class="sub">内容电商出海样本</div></div></div><span class="badge">模式最优</span></div>
+        <div class="platform-body">
+          <div class="metric-row"><div class="metric"><div class="num">$64.3B</div><div class="label">2025 全球 GMV，+94% YoY</div></div><div class="metric"><div class="num">$15.1B</div><div class="label">2025 美国 GMV，+68% YoY</div></div></div>
+          <p class="verdict">它的稀缺点不是“卖货”，而是把短视频、直播、达人佣金、品牌店铺塞进同一个内容场。掌握的是需求生成，不只是低价转化。</p>
+          <div class="bar" style="--w:94%"><span></span></div><div class="factor"><span>增长动能</span><span>极强</span></div>
+        </div>
+      </article>
+
+      <article class="card platform reveal">
+        <div class="platform-head"><div style="display:flex;gap:12px;align-items:center"><div class="logo shein">S</div><div><h3>SHEIN</h3><div class="sub">快时尚与柔性供应链</div></div></div><span class="badge">品类最深</span></div>
+        <div class="platform-body">
+          <div class="metric-row"><div class="metric"><div class="num">$38B</div><div class="label">2024 销售额，+19% YoY</div></div><div class="metric"><div class="num">$1B</div><div class="label">2024 净利润，约 -40%</div></div></div>
+          <p class="verdict">SHEIN 的壁垒是品类心智 + 快反供应链，不是单纯便宜。问题是快时尚天然暴露在环保、劳工、关税、平台化利润压力下。</p>
+          <div class="bar" style="--w:88%"><span></span></div><div class="factor"><span>品类护城河</span><span>很强</span></div>
+        </div>
+      </article>
+
+      <article class="card platform reveal">
+        <div class="platform-head"><div style="display:flex;gap:12px;align-items:center"><div class="logo temu">P</div><div><h3>Temu / PDD</h3><div class="sub">全球低价心智破圈</div></div></div><span class="badge">风险最高</span></div>
+        <div class="platform-body">
+          <div class="metric-row"><div class="metric"><div class="num">¥106.2B</div><div class="label">PDD 2026Q1 总收入，+11%</div></div><div class="metric"><div class="num">-48%</div><div class="label">Temu 美国日活：2025/5 较 2025/3</div></div></div>
+          <p class="verdict">Temu 已经证明低价可以快速打穿海外用户心智，但它也最吃小包、投放和政策窗口。后续核心是本地仓、半托管、广告 ROI 和合规成本。</p>
+          <div class="bar" style="--w:84%"><span></span></div><div class="factor"><span>增长/监管张力</span><span>双高</span></div>
+        </div>
+      </article>
+
+      <article class="card platform reveal">
+        <div class="platform-head"><div style="display:flex;gap:12px;align-items:center"><div class="logo ali">A</div><div><h3>阿里国际</h3><div class="sub">AliExpress / Alibaba.com / Lazada 等</div></div></div><span class="badge">底盘最厚</span></div>
+        <div class="platform-body">
+          <div class="metric-row"><div class="metric"><div class="num">¥144.17B</div><div class="label">FY2026 AIDC 收入，+9%</div></div><div class="metric"><div class="num">-¥2.05B</div><div class="label">FY2026 调整后 EBITA 亏损，收窄 86%</div></div></div>
+          <p class="verdict">阿里国际不是最性感的增长故事，但它有商家基础、B2B、跨境服务和多区域资产。问题是用户心智偏老，零售端要被 Temu/SHEIN/TikTok 分流。</p>
+          <div class="bar" style="--w:80%"><span></span></div><div class="factor"><span>规模稳定性</span><span>高</span></div>
+        </div>
+      </article>
+
+      <article class="card platform reveal">
+        <div class="platform-head"><div style="display:flex;gap:12px;align-items:center"><div class="logo jd">J</div><div><h3>JD Joybuy</h3><div class="sub">2026 欧洲重启</div></div></div><span class="badge">观察位</span></div>
+        <div class="platform-body">
+          <div class="metric-row"><div class="metric"><div class="num">6 国</div><div class="label">英国、德国、法国、荷兰、比利时、卢森堡</div></div><div class="metric"><div class="num">100K+</div><div class="label">上线商品，覆盖约 1500 万户同/次日达</div></div></div>
+          <p class="verdict">京东走的是重履约、本地仓、品质感路线，更像挑战 Amazon 的长期打法。方向对，但成本重，消费者心智和复购还要用数据验证。</p>
+          <div class="bar" style="--w:58%"><span></span></div><div class="factor"><span>验证进度</span><span>早期</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-title reveal"><h2>模式位置图</h2><small>Map</small></div>
+      <div class="card matrix-card reveal">
+        <p class="bigline">看出海平台，别只看 GMV。要看“模式护城河”和“监管暴露”。</p>
+        <div class="matrix">
+          <svg viewBox="0 0 360 260" width="100%" height="260" role="img" aria-label="电商出海平台模式护城河与监管暴露矩阵">
+            <defs>
+              <linearGradient id="grid" x1="0" x2="1"><stop stop-color="#fff7ed"/><stop offset="1" stop-color="#fff0f3"/></linearGradient>
+            </defs>
+            <rect x="0" y="0" width="360" height="260" rx="20" fill="url(#grid)" />
+            <line x1="42" y1="210" x2="320" y2="210" stroke="#d9c8b3" stroke-width="2"/>
+            <line x1="42" y1="40" x2="42" y2="210" stroke="#d9c8b3" stroke-width="2"/>
+            <line x1="42" y1="125" x2="320" y2="125" stroke="#ead9c6" stroke-dasharray="5 5"/>
+            <line x1="181" y1="40" x2="181" y2="210" stroke="#ead9c6" stroke-dasharray="5 5"/>
+            <text x="40" y="26" class="svgsmall">模式护城河 ↑</text>
+            <text x="218" y="238" class="svgsmall">监管/关税暴露 →</text>
+            <g class="bubble"><circle cx="145" cy="62" r="28" fill="#111"/><text x="145" y="67" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">TikTok</text></g>
+            <g class="bubble"><circle cx="245" cy="78" r="27" fill="#222"/><text x="245" y="83" text-anchor="middle" fill="#fff" font-size="12" font-weight="900">SHEIN</text></g>
+            <g class="bubble"><circle cx="292" cy="136" r="29" fill="#ff8d36"/><text x="292" y="141" text-anchor="middle" fill="#111" font-size="12" font-weight="950">Temu</text></g>
+            <g class="bubble"><circle cx="116" cy="134" r="25" fill="#ffb000"/><text x="116" y="139" text-anchor="middle" fill="#111" font-size="11" font-weight="950">阿里</text></g>
+            <g class="bubble"><circle cx="96" cy="176" r="22" fill="#e4002b"/><text x="96" y="181" text-anchor="middle" fill="#fff" font-size="11" font-weight="950">JD</text></g>
+          </svg>
+          <div class="axis-label"><span>更像生态</span><span>更吃小包/关税</span></div>
+        </div>
+        <p class="note">位置是分析判断，不是精确计量。TikTok Shop 更靠“需求生成”；Temu/SHEIN 更暴露在低价值包裹和关税政策；阿里和京东更偏基础设施/履约路线。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title reveal"><h2>2026 最大变量</h2><small>Risk</small></div>
+      <div class="card reveal">
+        <div class="risk-grid">
+          <div class="risk"><div class="risk-icon">税</div><div><h4>小包红利被重估</h4><p>美国 de minimis 调整已冲击 Temu；欧盟 2026/7/1 起对低价值电商包裹征收 €3 费用。低价平台不能再假设跨境直发永远便宜。</p></div></div>
+          <div class="risk"><div class="risk-icon">仓</div><div><h4>本地仓不是加分项，是生存项</h4><p>半托管、本地仓、本地退货、本地售后会从“运营优化”变成“合规与成本控制”的基础设施。</p></div></div>
+          <div class="risk"><div class="risk-icon">人</div><div><h4>流量平台要过治理关</h4><p>TikTok Shop 的优势是内容场，但也必须处理达人佣金、假货、低质商品、直播信任和政治监管。</p></div></div>
+          <div class="risk"><div class="risk-icon">利</div><div><h4>利润比 GMV 更诚实</h4><p>Temu 看 PDD 费用强度，SHEIN 看利润压缩，阿里看亏损收窄。2026 年以后，亏损换规模的故事没那么好讲。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title reveal"><h2>长期判断</h2><small>Playbook</small></div>
+      <div class="card reveal">
+        <div class="mini-title">判断框架</div>
+        <div class="timeline">
+          <div class="tl"><b>短期：低价仍然有效</b><p>价格敏感用户还在，Temu/SHEIN 的心智不会突然消失。但单位经济模型会变难。</p></div>
+          <div class="tl"><b>中期：履约与合规决定胜负</b><p>能把货前置到本地、把退货售后做顺、把税费显性化的平台，会比纯直发平台更稳。</p></div>
+          <div class="tl"><b>长期：谁能制造需求，谁才有上限</b><p>TikTok Shop 的战略价值在于内容场交易化。它不是“又一个商城”，而是海外版内容电商基础设施。</p></div>
+        </div>
+      </div>
+      <div class="card reveal" style="background:#17120f;color:#fff;border-color:#17120f">
+        <div class="sticker">TL;DR</div>
+        <p class="bigline" style="color:#fff;padding-right:80px">最优解不是“更便宜”，而是“更本地、更可信、更会制造需求”。</p>
+        <p class="bodycopy" style="color:#f0dfd0">2026 年以后，国内电商出海从套利游戏，进入运营硬仗。谁还只讲流量和补贴，谁大概率在被时代偷家。</p>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-title reveal"><h2>数据来源</h2><small>Sources</small></div>
+      <div class="card reveal">
+        <p class="bodycopy">口径说明：平台不都披露 GMV，部分数据来自公司财报，部分来自 Reuters、Momentum Works 等第三方研究或报道。数值用于商业判断，不作为审计口径。</p>
+        <ol class="source-list">
+          <li><a href="https://thelowdown.momentum.asia/new-report-tiktok-shop-u-s-gmv-grew-68-to-reach-us15-1b-in-2025/" target="_blank" rel="noreferrer">Momentum Works：TikTok Shop 2025 GMV</a></li>
+          <li><a href="https://momentum.asia/insights/detail/tiktok-shop-in-the-us-h1-2025" target="_blank" rel="noreferrer">Momentum Works：TikTok Shop H1 2025</a></li>
+          <li><a href="https://investor.pddholdings.com/news-releases/news-release-details/pdd-holdings-announces-first-quarter-2026-unaudited-financial/" target="_blank" rel="noreferrer">PDD Holdings：2026Q1 财报</a></li>
+          <li><a href="https://www.reuters.com/business/retail-consumer/retailer-temus-daily-us-users-halve-following-end-de-minimis-loophole-2025-06-02/" target="_blank" rel="noreferrer">Reuters：Temu 美国日活与 de minimis 影响</a></li>
+          <li><a href="https://www.reuters.com/business/retail-consumer/sheins-profits-drop-by-more-than-third-2024-ft-reports-2025-02-23/" target="_blank" rel="noreferrer">Reuters：SHEIN 2024 销售额与利润</a></li>
+          <li><a href="https://www.reuters.com/business/retail-consumer/fast-fashion-retailer-sheins-uk-sales-surge-28-billion-2024-2025-08-15/" target="_blank" rel="noreferrer">Reuters：SHEIN UK 2024 销售额</a></li>
+          <li><a href="https://www.businesswire.com/news/home/20260512841182/en/Alibaba-Group-Announces-March-Quarter-2026-and-Fiscal-Year-2026-Results" target="_blank" rel="noreferrer">Alibaba Group：FY2026 财报</a></li>
+          <li><a href="https://www.reuters.com/business/retail-consumer/jdcom-launches-joybuy-europe-targeting-amazon-2026-03-16/" target="_blank" rel="noreferrer">Reuters：JD Joybuy 欧洲上线</a></li>
+          <li><a href="https://www.reuters.com/business/retail-consumer/eu-slaps-3-fee-cheap-ecommerce-parcels-blow-shein-temu-aliexpress-2026-07-01/" target="_blank" rel="noreferrer">Reuters：欧盟 2026 低价值包裹 €3 费用</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="footer">Made for <b>mobile long-scroll sharing</b> · 适合截图 / 飞书 / 微信转发<br/>数据更新点：2026-07-05</div>
+  </main>
+
+  <div class="sticky-actions">
+    <button class="primary" id="copyBtn">复制核心结论</button>
+    <a class="secondary" href="#sources">来源</a>
+  </div>
+  <div class="toast" id="toast">已复制，可直接发群里</div>
+
+  <script>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){ entry.target.classList.add('on'); observer.unobserve(entry.target); }
+      })
+    },{threshold:.08});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    const conclusion = `国内电商出海 2026 判断：TikTok Shop 模式最优，SHEIN 品类最深，Temu 破圈最猛但政策 beta 最高，阿里国际底盘最厚，JD Joybuy 属于观察位。2026 后核心不再是更便宜，而是更本地、更可信、更会制造需求。`;
+    const toast = document.getElementById('toast');
+    document.getElementById('copyBtn').addEventListener('click', async()=>{
+      try{
+        await navigator.clipboard.writeText(conclusion);
+        toast.classList.add('show');
+        setTimeout(()=>toast.classList.remove('show'),1600);
+      }catch(e){
+        const ta = document.createElement('textarea');
+        ta.value = conclusion;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        toast.classList.add('show');
+        setTimeout(()=>toast.classList.remove('show'),1600);
+      }
+    });
+  </script>
+</body>
+</html>
